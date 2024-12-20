@@ -21,7 +21,7 @@ a{
 
 // navbar
 .main-nav{
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -275,6 +275,24 @@ a{
     gap: 0.5em;
     justify-content: center;
 
+    &.border-btn{
+        border: 1px solid #121A1F;
+        background: transparent;
+
+        span{
+            color: #121A1F;
+            font-weight: 400;
+        }
+    }
+
+    &.center{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
     span{
         color: #121A1F;
         font-weight: 600;
@@ -297,7 +315,11 @@ a{
 }
 .sec-para{
     font-size: 18px;
-    color: #101010;
+    color: rgba($color: #101010, $alpha: 0.7);
+
+    @media(min-width: 1500px){
+        font-size: 20px;
+    }
 }
 .sec{
     padding: 3em 0;
@@ -332,8 +354,8 @@ a{
         position: absolute;
         top: 50%;
         right: 0;
-        width: 22px;
-        height: 22px;
+        width: 15px;
+        height: 15px;
         background: #fff;
         border-radius: 50%;
         box-shadow: 0px 0px 0px 8px rgba($color: #fff, $alpha: 0.5), 0px 0px 0px 15px rgba($color: #FFBD59, $alpha: 1);
@@ -417,5 +439,74 @@ a{
        .l-part{
             background: #fff;
        }
+    }
+}
+.gray-bg{
+    background: #F5F5F5;
+}
+.team-card{
+    padding: 1.5em;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px 0px rgba($color: #070492, $alpha: 0.1), 0px 10px 60px 0px rgba($color: #062F7D, $alpha: 0.1), 0px 12px 24px 0px rgba($color: #1B3B77, $alpha: 0.05);   
+    display: grid;
+    grid-template-columns: 0.45fr 1fr;
+    align-items: center;
+    gap: 2em;
+    border: 1px solid #EAECF0;
+
+    .team-img{
+        width: 100%;
+        padding-top: 100%;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    h3{
+        font-weight: 500;
+        font-size: 32px;
+    }
+    p{
+        font-size: 18px;
+        color: #5C5C5C;
+        margin-bottom: 0;
+    }
+}
+.team-tabs{
+    margin-top: 2em;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 2em !important;
+    border: none !important;
+
+    li{
+        // flex: 1 1 auto;
+
+        button{
+            color: #101010 !important;
+            font-size: 19px;
+            font-weight: 400;
+            padding: 0.5em 2.5em;
+            min-width: max-content;
+            // width: 100%;
+            border: none !important;
+            background: transparent !important;
+            border-bottom: 3px solid transparent !important;
+            
+            &.active{
+                border-bottom: 3px solid #101010 !important;
+                font-weight: 600;
+            }
+        }
     }
 }

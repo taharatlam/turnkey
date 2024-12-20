@@ -5,7 +5,7 @@ import measurementIcon from '@/images/measurement.svg'
 import executionIcon from '@/images/execution.svg'
 import fileHandoverIcon from '@/images/final-handover.svg'
 import Image from 'next/image'
-
+import downArrowIcon from '@/images/down.svg'
 
 const HowItWorkSec = () => {
 
@@ -75,6 +75,14 @@ const HowItWorkSec = () => {
                             </li>
                         ))}
                     </ul>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-lg-12 col-12 text-center mt-4">
+                    <a href="/contact" className="main-btn border-btn center">
+                        <span>See More</span>
+                        <Image src={downArrowIcon} alt="Arrow Right" />
+                    </a>
                 </div>
             </div>
         </div>
