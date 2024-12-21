@@ -7,6 +7,8 @@ import OurPortfolio from "@/components/home/OurPortfolio";
 import TrustPilot from "@/components/home/TrustPilot";
 import LeaveYourContact from "@/components/home/LeaveYourContact";
 import FaqSec from "@/components/home/FaqSec";
+import Whychoose from "@/components/home/Whychoose";
+
 export default function Home() {
   return (
     <div>
@@ -18,6 +20,7 @@ export default function Home() {
       <TrustPilot />
       <LeaveYourContact />
       <FaqSec />
+      <Whychoose />
     </div>
   );
 }
