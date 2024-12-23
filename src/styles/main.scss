@@ -232,6 +232,36 @@ a{
         }
     }
 
+
+    .phone-code-static-input{
+        width: 100%;
+        border: 1px solid #5C5C5C;
+        border-radius: 10px;
+        background: white;
+        outline: none;
+        box-shadow: none;
+        padding: 0.8em 1em;
+        color: #000;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        padding-right: 1.2em;
+
+        img{
+            position: static !important;
+            transform: none !important;
+            width: 15px;
+            min-width: 15px;
+            height: auto;
+        }
+
+        &::placeholder{
+            color: #76868B;
+            opacity: 1;
+        }
+    }
+
     .select-wrap, .country-code-select{
         position: relative;
 
@@ -265,7 +295,7 @@ a{
         }
 
         >*{
-            padding-bottom: 0 !important;
+            // padding-bottom: 0 !important;
         }
 
         select{
