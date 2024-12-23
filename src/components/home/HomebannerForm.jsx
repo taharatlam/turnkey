@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Select from 'react-select'
 import { Formik, Form, Field } from 'formik'
@@ -12,7 +12,7 @@ import { CountryFlagPicker } from '../CountryFlagPicker'
 import { timeSlots, areas } from '@/utils/FormFieldData'
 
 const HomebannerForm = () => {
-  const [selected, setSelected] = React.useState('AE')
+  const [selected, setSelected] = useState('AE')
 
   const timeOptions = timeSlots.map(time => ({
     value: time,
@@ -42,7 +42,7 @@ const HomebannerForm = () => {
   })
 
   const customStyles = {
-    control: (provided) => ({
+    control: (provided, state) => ({
       ...provided,
       border: '1px solid #5C5C5C',
       borderRadius: '10px',
@@ -102,6 +102,9 @@ const HomebannerForm = () => {
                           id="fullName" 
                           name="fullName" 
                           placeholder="John Doe"
+                          style={{
+                            backgroundColor: values.fullName ? '#F5F5F5' : 'white'
+                          }}
                         />
                         {errors.fullName && touched.fullName && (
                           <div className="error-message">{errors.fullName}</div>
@@ -116,6 +119,9 @@ const HomebannerForm = () => {
                           id="email"
                           name="email"
                           placeholder="john@example.com"
+                          style={{
+                            backgroundColor: values.email ? '#F5F5F5' : 'white'
+                          }}
                         />
                         {errors.email && touched.email && (
                           <div className="error-message">{errors.email}</div>
@@ -129,7 +135,13 @@ const HomebannerForm = () => {
                           id="timeSlot"
                           options={timeOptions}
                           placeholder="Please select a time"
-                          styles={customStyles}
+                          styles={{
+                            ...customStyles,
+                            control: (base) => ({
+                              ...customStyles.control(base),
+                              backgroundColor: values.timeSlot ? '#F5F5F5' : 'white'
+                            })
+                          }}
                           isSearchable={true}
                           value={values.timeSlot}
                           onChange={(option) => setFieldValue('timeSlot', option)}
@@ -146,7 +158,13 @@ const HomebannerForm = () => {
                           id="area"
                           options={areaOptions}
                           placeholder="Search area"
-                          styles={customStyles}
+                          styles={{
+                            ...customStyles,
+                            control: (base) => ({
+                              ...customStyles.control(base),
+                              backgroundColor: values.area ? '#F5F5F5' : 'white'
+                            })
+                          }}
                           isSearchable={true}
                           value={values.area}
                           onChange={(option) => setFieldValue('area', option)}
@@ -168,6 +186,9 @@ const HomebannerForm = () => {
                               id="phone"
                               name="phone"
                               placeholder="50 123 4567"
+                              style={{
+                                backgroundColor: values.phone ? '#F5F5F5' : 'white'
+                              }}
                             />
                         </div>
                         {errors.phone && touched.phone && (

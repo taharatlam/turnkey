@@ -96,7 +96,7 @@ const Refresh = () => {
                             validationSchema={validationSchema}
                             onSubmit={handleSubmit}
                         >
-                            {({ errors, touched, isSubmitting, setFieldValue }) => (
+                            {({ errors, touched, isSubmitting, setFieldValue, values }) => (
                                 <Form>
                                     <div className="row">
                                         <div className="col-lg-6 col-12">
@@ -107,6 +107,9 @@ const Refresh = () => {
                                                     id="fullName"
                                                     name="fullName"
                                                     placeholder="John Doe"
+                                                    style={{
+                                                      backgroundColor: values.fullName ? '#F5F5F5' : 'white'
+                                                    }}
                                                 />
                                                 {errors.fullName && touched.fullName && (
                                                     <div className="error-message">{errors.fullName}</div>
@@ -121,6 +124,9 @@ const Refresh = () => {
                                                     id="email"
                                                     name="email"
                                                     placeholder="john@example.com"
+                                                    style={{
+                                                      backgroundColor: values.email ? '#F5F5F5' : 'white'
+                                                    }}
                                                 />
                                                 {errors.email && touched.email && (
                                                     <div className="error-message">{errors.email}</div>
@@ -134,7 +140,13 @@ const Refresh = () => {
                                                     id="timeSlot"
                                                     name="timeSlot"
                                                     options={timeSlotOptions}
-                                                    styles={customStyles}
+                                                    styles={{
+                                                      ...customStyles,
+                                                      control: (base) => ({
+                                                        ...customStyles.control(base),
+                                                        backgroundColor: values.timeSlot ? '#F5F5F5' : 'white'
+                                                      })
+                                                    }}
                                                     placeholder="Please select a time"
                                                     onChange={(option) => setFieldValue('timeSlot', option.value)}
                                                 />
@@ -150,7 +162,13 @@ const Refresh = () => {
                                                     id="area"
                                                     name="area"
                                                     options={areaOptions}
-                                                    styles={customStyles}
+                                                    styles={{
+                                                      ...customStyles,
+                                                      control: (base) => ({
+                                                        ...customStyles.control(base),
+                                                        backgroundColor: values.area ? '#F5F5F5' : 'white'
+                                                      })
+                                                    }}
                                                     placeholder="Search area"
                                                     onChange={(option) => setFieldValue('area', option.value)}
                                                 />
@@ -171,6 +189,9 @@ const Refresh = () => {
                                                         id="phone"
                                                         name="phone"
                                                         placeholder="50 123 4567"
+                                                        style={{
+                                                          backgroundColor: values.phone ? '#F5F5F5' : 'white'
+                                                        }}
                                                     />
                                                 </div>
                                                 {errors.phone && touched.phone && (
