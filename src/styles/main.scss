@@ -659,6 +659,38 @@ a{
 }
 .port-swiper{
     position: relative;
+
+    
+}
+.port-swiper-container{
+    position: relative;
+
+    button{
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        img{
+            width: 42px;
+            height: auto;
+        }
+    }
+
+    .custom-prev-button{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) translateX(-50%);
+        z-index: 2;
+    }
+    .custom-next-button{
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) translateX(50%);
+        z-index: 2;
+    }
 }
 .trust-pilot-content{
 
@@ -1065,5 +1097,11 @@ a{
         .swiper-slide{
             height: auto;
         }
+    }
+}
+.quality-img{
+
+    img{
+        height: auto;
     }
 }

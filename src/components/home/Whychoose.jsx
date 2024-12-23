@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import icc1 from '@/images/lock.png'
+import icc1 from '@/images/lock.svg'
 import icc2 from '@/images/design.svg'
 import icc3 from '@/images/italy.svg'
 
