@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import phoneIcon from '@/images/phone-icon.svg'
 import meetingIcon from '@/images/meeting.svg'
 import measurementIcon from '@/images/measurement.svg'
@@ -8,6 +9,7 @@ import Image from 'next/image'
 import downArrowIcon from '@/images/down.svg'
 
 const HowItWorkSec = () => {
+    const [showAll, setShowAll] = useState(false)
 
     const howItWorkList = [
         {
@@ -42,6 +44,12 @@ const HowItWorkSec = () => {
         }
     ]
 
+    const visibleItems = showAll ? howItWorkList : howItWorkList.slice(0, 3)
+
+    const handleToggle = () => {
+        setShowAll(!showAll)
+    }
+
   return (
     <section className="how-it-work-sec sec">
         <div className="container">
@@ -56,8 +64,16 @@ const HowItWorkSec = () => {
             <div className="row">
                 <div className="col-12">
                     <ul className="how-it-work-list">
-                        {howItWorkList.map((item, index) => (
-                            <li className="how-it-work-item" key={index}>
+                        {visibleItems.map((item, index) => (
+                            <li 
+                                className="how-it-work-item" 
+                                key={index}
+                                style={{
+                                    opacity: 0,
+                                    transform: 'translateY(20px)',
+                                    animation: `slideIn 0.5s ease-out ${index * 0.2}s forwards`
+                                }}
+                            >
                                 <div className="l-part">
                                     <h3>0{index + 1}</h3>
                                 </div>
@@ -72,6 +88,14 @@ const HowItWorkSec = () => {
                                         </p>
                                     </div>
                                 </div>
+                                <style jsx>{`
+                                    @keyframes slideIn {
+                                        to {
+                                            opacity: 1;
+                                            transform: translateY(0);
+                                        }
+                                    }
+                                `}</style>
                             </li>
                         ))}
                     </ul>
@@ -79,14 +103,16 @@ const HowItWorkSec = () => {
             </div>
             <div className="row">
                 <div className="col-lg-12 col-12 text-center mt-4">
-                    <a href="/contact" className="main-btn border-btn center">
-                        <span>See More</span>
-                        <Image src={downArrowIcon} alt="Arrow Right" />
-                    </a>
+                    <button onClick={handleToggle} className="main-btn border-btn center">
+                        <span>{showAll ? 'See Less' : 'See More'}</span>
+                        <Image src={downArrowIcon} alt="Arrow Right" style={{
+                            transform: showAll ? 'rotate(180deg)' : 'none',
+                            transition: 'transform 0.3s ease'
+                        }} />
+                    </button>
                 </div>
             </div>
         </div>
-
     </section>
   )
 }

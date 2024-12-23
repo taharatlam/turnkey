@@ -1,11 +1,21 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
 import formTopImage from '@/images/form-bottom.svg'
 import selectIcon from '@/images/drop.svg'
 import arrowRightIcon from '@/images/black-arrow.svg'
-import CountryCodes from '../CountryCodes'
+import { CountryFlagPicker } from '../CountryFlagPicker'
 
 const HomebannerForm = () => {
+  const [selected, setSelected] = React.useState('AE')
+
+  const phoneCodeMap = {
+    'AE': '+971',
+    'US': '+1',
+    'GB': '+44',
+    'IN': '+91'
+  }
+
   return (
     <div className="home-banner-form">
         <div className="form-top">
@@ -58,8 +68,7 @@ const HomebannerForm = () => {
                         <label htmlFor="phone" className="label-text">Phone number</label>
                         <div className="phone-input-group">
                             <div className="country-code-select">
-                                <CountryCodes />
-                                <Image src={selectIcon} alt="Select Icon" />
+                                <CountryFlagPicker />
                             </div>
                             <input type="tel" id="phone" placeholder="50 123 4567" />
                         </div>

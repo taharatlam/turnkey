@@ -30,6 +30,7 @@ const Partners = () => {
             </div>
             <Swiper
                 spaceBetween={30}
+                loop={true}
                 breakpoints={{
                     0: {
                         slidesPerView: 1,

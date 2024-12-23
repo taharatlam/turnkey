@@ -4,6 +4,7 @@ import refresh from '@/images/imgg.jpg'
 import selectIcon from '@/images/drop.svg'
 import arrowRightIcon from '@/images/black-arrow.svg'
 import CountryCodes from '../CountryCodes'
+import { CountryFlagPicker } from '../CountryFlagPicker'
 
 const Refresh = () => {
   return (
@@ -67,8 +68,9 @@ const Refresh = () => {
                         <label htmlFor="phone" className="label-text">Phone number</label>
                         <div className="phone-input-group">
                             <div className="country-code-select">
-                                <CountryCodes />
-                                <Image src={selectIcon} alt="Select Icon" />
+                                {/* <CountryCodes /> */}
+                                <CountryFlagPicker />
+                                {/* <Image src={selectIcon} alt="Select Icon" /> */}
                             </div>
                             <input type="tel" id="phone" placeholder="50 123 4567" />
                         </div>

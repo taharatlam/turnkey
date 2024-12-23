@@ -40,6 +40,7 @@ const OurPortfolio = () => {
                             spaceBetween={50}
                             slidesPerView={1}
                             className='port-swiper mt-4'
+                            loop={true}
                             ref={swiperRef}
                         >
                             <SwiperSlide>

@@ -58,7 +58,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="col-lg-3 col-6">
+                <div className="col-lg-3 col-12">
                     <h3 className='ft-title'>Location & Time</h3>
                     <ul className='ft-links'>
                         <li>
@@ -71,7 +71,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="col-lg-3 col-6">
+                <div className="col-lg-3 col-12">
                     <h3 className='ft-title'>Get in Touch</h3>
                     <ul className='ft-links con-links'>
                         <li>
