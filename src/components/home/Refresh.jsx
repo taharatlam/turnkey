@@ -5,6 +5,8 @@ import selectIcon from '@/images/drop.svg'
 import arrowRightIcon from '@/images/black-arrow.svg'
 import CountryCodes from '../CountryCodes'
 import { CountryFlagPicker } from '../CountryFlagPicker'
+import { areas, timeSlots } from '@/utils/FormFieldData'
+
 
 const Refresh = () => {
   return (
@@ -43,8 +45,11 @@ const Refresh = () => {
                         <div className="select-wrap">
                             <select name="" id="">
                                 <option value="morning">Please select a time</option>
-                                <option value="afternoon">Afternoon</option>
-                                <option value="evening">Evening</option>
+                                {
+                                    timeSlots.map((time, index) => (
+                                        <option value={time} key={index}>{time}</option>
+                                    ))
+                                }
                             </select>
                             <Image src={selectIcon} alt="Select Icon" />
                         </div>
@@ -56,8 +61,11 @@ const Refresh = () => {
                         <div className="select-wrap">
                             <select name="" id="">
                                 <option value="morning">Search area </option>
-                                <option value="afternoon">Afternoon</option>
-                                <option value="evening">Evening</option>
+                                {
+                                    areas.map((area, index) => (
+                                        <option value={area} key={index}>{area}</option>
+                                    ))
+                                }
                             </select>
                             <Image src={selectIcon} alt="Select Icon" />
                         </div>
@@ -87,9 +95,7 @@ const Refresh = () => {
                     </div>
                 </div>
             </div>
-            <div className='row'>
-                
-            </div>
+     
         </div>
     </section>
   )

@@ -6,15 +6,13 @@ import selectIcon from '@/images/drop.svg'
 import arrowRightIcon from '@/images/black-arrow.svg'
 import { CountryFlagPicker } from '../CountryFlagPicker'
 
+import { timeSlots, areas } from '@/utils/FormFieldData'
+
+
 const HomebannerForm = () => {
   const [selected, setSelected] = React.useState('AE')
 
-  const phoneCodeMap = {
-    'AE': '+971',
-    'US': '+1',
-    'GB': '+44',
-    'IN': '+91'
-  }
+  
 
   return (
     <div className="home-banner-form">
@@ -43,8 +41,11 @@ const HomebannerForm = () => {
                         <div className="select-wrap">
                             <select name="" id="">
                                 <option value="morning">Please select a time</option>
-                                <option value="afternoon">Afternoon</option>
-                                <option value="evening">Evening</option>
+                                {
+                                    timeSlots.map((time, index) => (
+                                        <option value={time} key={index}>{time}</option>
+                                    ))
+                                }
                             </select>
                             <Image src={selectIcon} alt="Select Icon" />
                         </div>
@@ -56,8 +57,11 @@ const HomebannerForm = () => {
                         <div className="select-wrap">
                             <select name="" id="">
                                 <option value="morning">Search area </option>
-                                <option value="afternoon">Afternoon</option>
-                                <option value="evening">Evening</option>
+                                {
+                                    areas.map((area, index) => (
+                                        <option value={area} key={index}>{area}</option>
+                                    ))
+                                }
                             </select>
                             <Image src={selectIcon} alt="Select Icon" />
                         </div>

@@ -26,22 +26,22 @@ const Footer = () => {
                     </p>
                     <ul className='soc-links'>
                         <li>
-                            <Link href="/">
+                            <Link href="https://www.facebook.com/people/Turnkey-Renovations-Dubai/61566382736690/?mibextid=LQQJ4d" target='_blank'>
                                 <Image src={facebook} alt='Facebook' />
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="https://www.instagram.com/turnkeyrenovations.dubai/" target='_blank'>
                                 <Image src={instagram} alt='Instagram' />
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="https://www.linkedin.com/company/turnkey-renovations-uae/" target='_blank'>
                                 <Image src={linkedin} alt='Linkedin' />
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="https://api.whatsapp.com/send?phone=97145579950&text=Hello%2C%20I%27m%20interested%20in%20renovating%20my%20home%20with%20Turnkey%20Renovations.%20Can%20we%20please%20schedule%20a%20viewing%20of%20my%20property%3F" target='_blank'>
                                 <Image src={whatsapp} alt='Whatsapp' />
                             </Link>
                         </li>
@@ -54,7 +54,7 @@ const Footer = () => {
                             <Link href="/">Home</Link>
                         </li>
                         <li>
-                            <Link href="/">Cost Calculator</Link>
+                            <Link href="https://turnkeyrenovations.ae/cost-calculator" target='_blank'>Cost Calculator</Link>
                         </li>
                     </ul>
                 </div>
@@ -75,13 +75,13 @@ const Footer = () => {
                     <h3 className='ft-title'>Get in Touch</h3>
                     <ul className='ft-links con-links'>
                         <li>
-                            <Link href="/">
+                            <Link href="https://api.whatsapp.com/send?phone=97145579950&text=Hello%2C%20I%27m%20interested%20in%20renovating%20my%20home%20with%20Turnkey%20Renovations.%20Can%20we%20please%20schedule%20a%20viewing%20of%20my%20property%3F" target='_blank'>
                                 <Image src={wh} alt='Phone' />
                                 <span>Message us on WhatsApp</span>
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="tel:+97145579950">
                                 <div className='tp'>  
                                     <Image src={phone} alt='Phone' />
                                     <span>Phone</span>
@@ -90,7 +90,7 @@ const Footer = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/">
+                            <Link href="mailto:hello@turnkeyrenovations.ae">
                                 <div className='tp'>  
                                     <Image src={email} alt='Phone' />
                                     <span>Email</span>
@@ -109,10 +109,10 @@ const Footer = () => {
                         </p>
                         <ul className='ft-btm-links'>
                             <li>
-                                <Link href="/">Privacy Policy</Link>
+                                <Link href="https://turnkeyrenovations.ae/privacy-policy" target='_blank'>Privacy Policy</Link>
                             </li>
                             <li>
-                                <Link href="/">Terms of Use</Link>
+                                <Link href="https://turnkeyrenovations.ae/terms-and-conditions" target='_blank'>Terms of Use</Link>
                             </li>
                         </ul>
 

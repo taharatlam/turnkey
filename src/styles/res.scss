@@ -97,6 +97,10 @@
     .how-it-work-item .top-part h4{
         font-size: 22px;
     }
+    .acc .accordion-button .faq-icon{
+        min-width: 50px;
+        min-height: 50px;
+    }
     .get-started-btns{
         flex-direction: column;
         padding: 1em;
@@ -112,7 +116,7 @@
 
             span{
                 font-size: 16px;
-                text-align: left;
+                // text-align: left;
             }
         }
     }
