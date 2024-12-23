@@ -3,6 +3,7 @@ import React from 'react'
 const CountryCodes = () => {
   return (
     <select name="country-code" id="country-code">
+                                    <option value="+971">🇦🇪 +971</option>
                                     <option value="+1">🇺🇸 +1</option>
                                     <option value="+44">🇬🇧 +44</option>
                                     <option value="+971">🇦🇪 +971</option>
@@ -182,7 +183,7 @@ const CountryCodes = () => {
                                     <option value="+688">🇹🇻 +688</option>
                                     <option value="+256">🇺🇬 +256</option>
                                     <option value="+380">🇺🇦 +380</option>
-                                    <option value="+971">🇦🇪 +971</option>
+                                    
                                     <option value="+44">🇬🇧 +44</option>
                                     <option value="+1">🇺🇸 +1</option>
                                     <option value="+598">🇺🇾 +598</option>

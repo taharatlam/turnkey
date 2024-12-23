@@ -17,7 +17,7 @@ const TrustPilot = () => {
                         <h3 className='trust-pilot-title'>Excellent</h3>
                         <p className='trust-pilot-rating'>4.8</p>
                         <Image src={starIcon} alt='Star Icon' />
-                        <p className='trust-pilot-para'>Based on <Link href='https://www.trustpilot.com/review/redodubai.com'>1000+ reviews</Link></p>
+                        <p className='trust-pilot-para'>Based on <Link href='https://www.trustpilot.com/review/redodubai.com'>456 reviews</Link></p>
                         <Image src={trustPilotLogo} alt='TrustPilot Logo' />
                     </div>
                 </div>

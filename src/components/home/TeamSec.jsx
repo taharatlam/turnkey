@@ -14,6 +14,7 @@ const teamMembers = [
   { eventKey: "team6", title: "Technical Manager", content: <p>Details about Team Member 5</p> },
   { eventKey: "team7", title: "Project Manager", content: <p>Details about Team Member 5</p> },
   { eventKey: "team8", title: "Head of Sales", content: <p>Details about Team Member 5</p> },
+  { eventKey: "team9", title: "Admin", content: <p>Details about Team Member 5</p> },
 ];
 
 const TeamSec = () => {

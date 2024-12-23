@@ -84,7 +84,7 @@ const SpaceSection = () => {
                 <div className='col-lg-12 col-12 text-center'>
                     <div className='get-started-container'>
                         <h2 className='sec-title white'>Get Started Today</h2>
-                        <p className='sec-para white'>Ready to bring your dream home to life? Contact us for a free consultation and let's discuss your renovation project.</p>
+                        <p className='sec-para white opc'>Ready to bring your dream home to life? Contact us for a free consultation and let's discuss your renovation project.</p>
                         <div className='get-started-btns'>
                             <Link href='/' className='call-btn'>
                                 <Image src={call} alt='call' />
